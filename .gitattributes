@@ -1,1 +1,1 @@
-*.php linguist-detectable=false
+.rb linguist-language=PHP
