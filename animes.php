@@ -1,4 +1,3 @@
-<!--TODO: Ao clicar no botao modificar a url do ajax (talvez com uma funcao resulte)-->
 <!doctype html>
 <html lang="en">
 
