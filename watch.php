@@ -123,7 +123,7 @@ session_start();
     </div>
         <script>
             $.ajax({
-                url: 'http://localhost:3000/last',
+                url: 'http://vexus.ga:3000/last',
                 method: 'GET',
                 success: (data) => {
                     let animes = document.getElementById('animes');
