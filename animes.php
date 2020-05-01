@@ -195,7 +195,7 @@
          });
             /* API RESULT */
             $.ajax({
-            url: 'http://localhost:3000/anime/' ,
+            url: 'http://vexus.ga:3000/anime/' ,
             method: 'GET',
             success: (data) => {
                 var i;
