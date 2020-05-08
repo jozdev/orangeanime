@@ -61,7 +61,7 @@ I appreciate any bug reported or improvement made!
   </tr>
 </table>
 
-<i>Este projeto só foi possivel graças aos contribuidores referidos acima</i>
+<i>This project was made possible by the contributors mentioned above</i>
 
 ## License
 
