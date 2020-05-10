@@ -21,7 +21,7 @@ This project consists of the realization of an anime streaming website that uses
 ## Warning
 
 - This project was developed with the intention of dealing with apis and creation of an streaming website and only for learning purposes.
-- This project was carried out through the use of scraping anime websites with portuguese subtitles, some features like gender need to be portuguese writing gender.
+- This project was carried out through the use of scraping anime websites with portuguese subtitles, some features like gender need to be portuguese writing genre.
 
 
 ## Demonstration 
