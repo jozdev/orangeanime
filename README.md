@@ -28,10 +28,16 @@ This project consists of the realization of an anime streaming website that uses
 
 <h2 align="center">Home</h1>
 <p align="center">
- <img src="https://cdn.discordapp.com/attachments/705466653499981824/705486061802881054/Screenshot_1.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847118168883300/Screenshot_at_May_10_02-03-28.png"  align="center">
  
  <p align="center">In this section the user can see the recent animes added.</p></p>
-                 
+
+<h2 align="center">Watch</h1>
+<p align="center">
+ <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847136560906292/Screenshot_at_May_10_02-04-18.png"  align="center">
+ 
+ <p align="center">In this section the user can watch episodes with different players.</p></p>
+      
 <h2 align="center">Animes</h1>
 <p align="center">
  <img src="https://cdn.discordapp.com/attachments/705466653499981824/705486062360723466/Screenshot_2.png"  align="center">
@@ -40,7 +46,7 @@ This project consists of the realization of an anime streaming website that uses
          
 <h2 align="center">Schedule</h1>
 <p align="center">
- <img src="https://cdn.discordapp.com/attachments/705466653499981824/705486058695163934/Screenshot_3.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847164046180442/Screenshot_at_May_10_02-04-26.png"  align="center">
  
  <p align="center">In this section the user can see which day of the week the anime of the season comes out.</p></p>
          
