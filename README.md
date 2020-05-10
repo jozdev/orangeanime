@@ -46,7 +46,7 @@ This project consists of the realization of an anime streaming website that uses
          
 <h2 align="center">Schedule</h1>
 <p align="center">
- <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847164046180442/Screenshot_at_May_10_02-04-26.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/708828143846424576/708848086788866119/Screenshot_at_May_10_02-09-00.png"  align="center">
  
  <p align="center">In this section the user can see which day of the week the anime of the season comes out.</p></p>
          
