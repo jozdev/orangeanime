@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+if(!isset($_GET['anime'])){
+    header("Location: index.php");
+}
 ?>
 <html lang="en">
 
@@ -16,7 +18,7 @@ session_start();
     <script src='https://kit.fontawesome.com/3cc432bb58.js' crossorigin='anonymous'></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+    <script type="text/javascript" src="//cdn.embed.ly/player-0.0.11.min.js"></script>
     <style>
         * {
             font-family: 'Montserrat', sans-serif;
@@ -112,46 +114,56 @@ session_start();
 
     <div class="notice">
         <h1 class="underline">
-            RECENT ANIME
+            WATCH ANIME
         </h1>
         <div class="container">
             <div class="row">
                 <div class="col-md-12" id="animes">
+                <button class="btn btn-outline-warning" id="btn_1">Player 1</button>
+
+                <iframe style="border: none;" id="to_watch_1" class="embedly-embed" width="1100" height="720" allowfullscreen  webkitallowfullscreen  mozallowfullscreen>
+                </iframe>   
                 </div>
             </div>
         </div>
     </div>
         <script>
-            $.ajax({
-                url: 'http://vexus.ga:3000/last',
-                method: 'GET',
-                success: (data) => {
-                    let animes = document.getElementById('animes');
-                    console.log(data);
+        let anime_to_watch = "<?= $_GET['anime'];?>";
+        let url = "http://localhost:3000/video/" + anime_to_watch;
+        $.ajax({
+            url: url,
+            method: 'get',
+            success: (res) => {
+                let player_url = res[0].player1;
+                let player2_url = res[0].player2;
+                console.log(player_url);
+                console.log(player2_url);
 
-                    data.forEach((element) => {
-                        console.log(element);
-                        let div_anime = document.createElement('div');
-                        let red_anime = document.createElement('a');
-                        let img_anime = document.createElement('img');
-                        let title_anime = document.createElement('div');
-                        let p = document.createElement('p');
-                        div_anime.classList.add("col-md-3");
-                        div_anime.style.display = "inline-block";
-                        red_anime.href = `https://animeshouse.net/episodio/${element.url}`; //pegar esse atributo 
-                        img_anime.src = `${element.image}`;
-                        title_anime.classList.add("col-md-12");
-                        title_anime.classList.add("text-center");
-                        img_anime.classList.add('ImageSizeAttr');
-                        p.innerHTML = element.title + '<br>' +  element.episode;
-                        title_anime.appendChild(p);
-                        div_anime.appendChild(red_anime);
-                        red_anime.appendChild(img_anime);
-                        red_anime.appendChild(title_anime);
-                        animes.appendChild(div_anime);
-                    });
-                }
-            });
+                if (player_url == null) {
+                document.getElementById('to_watch_1').src = player2_url;
+                } else if (player2_url == null) {
+                document.getElementById('to_watch_1').src = player_url;
+                } else {
+                document.getElementById('to_watch_1').src = player_url;
+        }
+
+        let btn_1 = document.getElementById('btn_1');
+        let btn_2 = document.getElementById('btn_2');
+        let embed1 = document.getElementById('to_watch_1');
+
+        btn_1.addEventListener('click', () => {
+            if (player_url == null) {
+                document.getElementById('to_watch_1').src = player2_url;
+                } else if (player2_url == null) {
+                document.getElementById('to_watch_1').src = player_url;
+                } else {
+                document.getElementById('to_watch_1').src = player_url;
+        }
+        })
+
+    }
+        });
+
 
             function transform(arr) {
                 return arr.reduce((memo, item) => {
@@ -192,6 +204,7 @@ session_start();
                 found_anime_div.style.display = 'none';
             });
         </script>
+        <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
 </body>
 
 </html>
