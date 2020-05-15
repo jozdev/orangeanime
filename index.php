@@ -79,8 +79,8 @@ session_start();
         }
         .ImageSizeAttr {
             border-radius:6px;
-            width:260px;
-            height:140px;
+            width:200px;
+            height:275px;
              }
         .ImageSizeAttr:hover{
             opacity: .3;
@@ -114,7 +114,7 @@ session_start();
         <h1 class="underline">
             RECENT ANIME
         </h1>
-        <div class="container">
+        <div class="contain er">
             <div class="row">
                 <div class="col-md-12" id="animes">
                 </div>
@@ -123,13 +123,14 @@ session_start();
     </div>
         <script>
             $.ajax({
-                url: 'http://vexus.ga:3000/last',
+                url: 'http://localhost:3000/last',
                 method: 'GET',
                 success: (data) => {
                     let animes = document.getElementById('animes');
-                    console.log(data);
 
                     data.forEach((element) => {
+                        let url = "http://localhost:3000/video/";
+                        let final_url = url + element.url;
                         console.log(element);
                         let div_anime = document.createElement('div');
                         let red_anime = document.createElement('a');
@@ -138,12 +139,11 @@ session_start();
                         let p = document.createElement('p');
                         div_anime.classList.add("col-md-3");
                         div_anime.style.display = "inline-block";
-                        red_anime.href = `https://animeshouse.net/episodio/${element.url}`; //pegar esse atributo 
+                        red_anime.href = "watch.php?anime=" + element.url; //pegar esse atributo 
                         img_anime.src = `${element.image}`;
                         title_anime.classList.add("col-md-12");
-                        title_anime.classList.add("text-center");
                         img_anime.classList.add('ImageSizeAttr');
-                        p.innerHTML = element.title + '<br>' +  element.episode;
+                        p.innerHTML = element.title;
                         title_anime.appendChild(p);
                         div_anime.appendChild(red_anime);
                         red_anime.appendChild(img_anime);
@@ -152,6 +152,7 @@ session_start();
                     });
                 }
             });
+
 
             function transform(arr) {
                 return arr.reduce((memo, item) => {
