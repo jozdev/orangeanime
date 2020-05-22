@@ -32,12 +32,6 @@ This project consists of the realization of an anime streaming website that uses
  
  <p align="center">In this section the user can see the recent animes added.</p></p>
 
-<h2 align="center">Watch</h1>
-<p align="center">
- <img src="https://cdn.discordapp.com/attachments/676884266617143354/713494314566549614/watch2.png"  align="center">
- 
- <p align="center">In this section the user can watch episodes with different players.</p></p>
-      
 <h2 align="center">Animes</h1>
 <p align="center">
  <img src="https://cdn.discordapp.com/attachments/450718681492750344/713497794949677076/unknown.png"  align="center">
@@ -46,6 +40,12 @@ This project consists of the realization of an anime streaming website that uses
 
  <p align="center">In this section the user can see all animes with begin with first letter.</p></p>
          
+         <h2 align="center">Watch</h1>
+<p align="center">
+ <img src="https://cdn.discordapp.com/attachments/676884266617143354/713494314566549614/watch2.png"  align="center">
+ 
+ <p align="center">In this section the user can watch episodes with different players.</p></p>
+      
 <h2 align="center">Schedule</h1>
 <p align="center">
  <img src="https://cdn.discordapp.com/attachments/450718681492750344/713497721063080086/unknown.png"  align="center">
