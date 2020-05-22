@@ -72,6 +72,10 @@
 
         }
 
+        a:hover {
+            color: white;
+        }
+
         .homeicon:hover {
             
         }
@@ -167,8 +171,18 @@
         </div>
     </div>
     <script>
-        
-            var k = 'a'; /* Anime Letter */
+            var k;
+            <?php
+                if(!isset($_GET['letter'])){
+                    ?>
+                    k = 0;
+                    <?php
+                }else{
+                    ?>
+                    k = '<?= $_GET['letter'];?>';
+                    <?php
+                }
+            ?>
             var d = 1; /* Anime Pagination */
 
             $("#prev").click(function(e) {
@@ -182,30 +196,210 @@
              console.log(d);
 
             });
+
             $("#a").click(function(e) {
             e.preventDefault();
-             console.log('a');
-             k = 'a';
+             window.location.href = '?letter=a';
             });
+
             $("#b").click(function(e) {
              e.preventDefault();
-             console.log('b');
-             k = 'b';
-             
-         });
+             window.location.href = '?letter=b';
+            });
+            $("#c").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=c';
+            });
+
+            $("#d").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=d';
+            });
+            $("#e").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=e';
+            });
+
+            $("#f").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=f';
+            });
+            $("#g").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=g';
+            });
+
+            $("#h").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=h';
+            });
+            $("#i").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=i';
+            });
+
+            $("#j").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=j';
+            });
+            $("#k").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=k';
+            });
+
+            $("#l").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=l';
+            });
+            $("#m").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=m';
+            });
+
+            $("#n").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=n';
+            });
+            $("#o").click(function(e) {
+            e.preventDefault();
+             window.location.href = '?letter=o';
+            });
+
+            $("#p").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=p';
+            });
+            $("#q").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=q';
+            });
+            $("#r").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=r';
+            });
+            $("#s").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=s';
+            });
+            $("#t").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=t';
+            });
+            $("#u").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=u';
+            });
+            $("#v").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=v';
+            });
+            $("#w").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=w';
+            });
+            $("#x").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=x';
+            });
+            $("#y").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=y';
+            });
+            $("#z").click(function(e) {
+             e.preventDefault();
+             window.location.href = '?letter=z';
+            });
+
+
+            let letters = [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+        ];
+
+
+         if(k != "0"){
+            let letter = k;
+            if(letters.includes(letter)){
+                var i;
+            for (i = 1; i <= 10; i++) { 
+            let url = 'http://localhost:3000/anime/'+i;       
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                    success: (res) => {
+                        res.forEach(anime => {
+                            if(anime.title.charAt(0).toUpperCase() == k.toUpperCase()){
+                                let animes = document.getElementById('animes');
+                                let redirect = document.createElement('a');
+                                let div_anime = document.createElement('div');
+                                let img_anime = document.createElement('img');
+                                let title_anime = document.createElement('div');
+                                let p = document.createElement('p');
+                                div_anime.classList.add("col-md-3");
+                                div_anime.style.display = "inline-block";
+                                img_anime.classList.add('ImageSizeAttr');
+                                img_anime.src = `${anime.image}`;
+                                redirect.href = "anime.php?anime=" + anime.url;
+                                title_anime.classList.add("col-md-12");
+                                title_anime.classList.add("text-center");
+                                p.innerHTML = anime.title;
+                                title_anime.appendChild(p);
+                                redirect.appendChild(img_anime); 
+                                redirect.appendChild(title_anime); 
+                                div_anime.appendChild(redirect);
+                                animes.appendChild(div_anime);  
+                            }
+                        })
+                
+                    }
+                }); }
+            }else{
+                window.location.href='./animes.php';
+            }
+         }else{
+
             /* API RESULT */
+            var i;
+            for (i = 1; i <= 10; i++) { 
+            let url = 'http://localhost:3000/anime/'+i;        
+
             $.ajax({
-            url: 'http://vexus.ga:3000/anime/' ,
+            url: url ,
             method: 'GET',
             success: (data) => {
                 var i;
                 let animes = document.getElementById('animes');
-                console.log(data);
                 for (i = 0; i < data.length; i++) {
+                let redirect = document.createElement('a');
                 let div_anime = document.createElement('div');
                 let img_anime = document.createElement('img');
                 let title_anime = document.createElement('div');
                 let p = document.createElement('p');
+                redirect.href = "anime.php?anime=" + data[i].url;
                 div_anime.classList.add("col-md-3");
                 div_anime.style.display = "inline-block";
                 img_anime.classList.add('ImageSizeAttr');
@@ -214,12 +408,17 @@
                 title_anime.classList.add("text-center");
                 p.innerHTML = data[i].title;
                 title_anime.appendChild(p);
-                div_anime.appendChild(img_anime);
-                div_anime.appendChild(title_anime);
+                redirect.appendChild(img_anime); 
+                redirect.appendChild(title_anime); 
+                div_anime.appendChild(redirect);
                 animes.appendChild(div_anime);  
+
                 }
             }
         });
+    }
+         }
+
            
 
 
