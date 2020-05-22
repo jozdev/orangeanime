@@ -35,13 +35,13 @@ This project consists of the realization of an anime streaming website that uses
 <h2 align="center">Animes</h1>
 <p align="center">
  <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847164046180442/Screenshot_at_May_10_02-04-26.png"  align="center">
-  <img src="https://prnt.sc/sm0iej"  align="center">
+  <img src="https://cdn.discordapp.com/attachments/676884266617143354/713494306744434745/view.png"  align="center">
 
  <p align="center">In this section the user can see all animes with begin with first letter.</p></p>
         
 <h2 align="center">Watch</h1>
 <p align="center">
- <img src="https://prnt.sc/sm0i3z"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/676884266617143354/713494314566549614/watch2.png"  align="center">
  
  <p align="center">In this section the user can watch episodes with different players.</p></p>
       
