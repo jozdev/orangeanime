@@ -28,28 +28,25 @@ This project consists of the realization of an anime streaming website that uses
 
 <h2 align="center">Home</h1>
 <p align="center">
- <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847118168883300/Screenshot_at_May_10_02-03-28.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/450718681492750344/713497861609750668/unknown.png"  align="center">
  
  <p align="center">In this section the user can see the recent animes added.</p></p>
 
-<h2 align="center">Animes</h1>
-<p align="center">
- <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847164046180442/Screenshot_at_May_10_02-04-26.png"  align="center">
-   <p align="center"></p></p>
-
-  <img src="https://cdn.discordapp.com/attachments/676884266617143354/713494306744434745/view.png"  align="center">
-
- <p align="center">In this section the user can see all animes with begin with first letter.</p></p>
-        
 <h2 align="center">Watch</h1>
 <p align="center">
- <img src="https://cdn.discordapp.com/attachments/676884266617143354/713494314566549614/watch2.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/708828143846424576/708847136560906292/Screenshot_at_May_10_02-04-18.png"  align="center">
  
  <p align="center">In this section the user can watch episodes with different players.</p></p>
       
+<h2 align="center">Animes</h1>
+<p align="center">
+ <img src="https://cdn.discordapp.com/attachments/450718681492750344/713497794949677076/unknown.png"  align="center">
+ 
+ <p align="center">In this section the user can see all animes with begin with first letter.</p></p>
+         
 <h2 align="center">Schedule</h1>
 <p align="center">
- <img src="https://cdn.discordapp.com/attachments/708828143846424576/708848086788866119/Screenshot_at_May_10_02-09-00.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/450718681492750344/713497721063080086/unknown.png"  align="center">
  
  <p align="center">In this section the user can see which day of the week the anime of the season comes out.</p></p>
          
