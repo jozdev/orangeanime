@@ -1,9 +1,10 @@
-<?php
+a<?php
 session_start();
 if(!isset($_GET['anime'])){
     header("Location: index.php");
 }
 ?>
+
 <html lang="en">
 
 <head>
@@ -87,6 +88,18 @@ if(!isset($_GET['anime'])){
         .ImageSizeAttr:hover{
             opacity: .3;
         }
+
+        select {
+        width: 100px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 13px;
+    color: #666;
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+    float: right;
+}
     </style>
 </head>
 
@@ -120,7 +133,48 @@ if(!isset($_GET['anime'])){
             <div class="row">
                 <div class="col-md-12" id="animes">
                 <button class="btn btn-outline-warning" id="btn_1">Player 1</button>
+                <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
 
+                <?php
+
+                $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                $basename = basename($url);
+                $url2 = str_replace($basename.'/',"",$url); //get http://localhost/orangeanime/watch.php?anime=kakushigoto/
+                $basename2 = basename($url2);
+                $url3 = str_replace('watch.php?anime=','',$basename2); //get kakushigoto
+                $curep = str_replace($url2,"",$url);
+                $curep2 = str_replace($url3.'-episodio-',"",$curep);
+                $ch = curl_init();
+ 
+                $animeURL = 'http://localhost:3000/animeinfo/' . $url3;
+                var_dump($animeURL);
+                curl_setopt($ch, CURLOPT_URL, $animeURL);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_HEADER, 0);
+                $string1 = curl_exec($ch);
+                curl_close ($ch);
+                $json_anime_file = json_decode($string1, true);
+                $lastep = $json_anime_file[0]["lastep"];
+
+                $epurl = str_replace($url2.'/',"",$url); //get akame-ga-kill-episodio-24-online/
+                $epurl2 = str_replace($lastep.'-online/',"",$epurl); //akame-ga-kill-episodio
+
+
+                for($i=1; $i <= $lastep; $i++) {
+                    $epurl3 = $epurl2 . $i . '-online/'; //get url 
+                 
+                 if($curep2 == $i) {
+                     ?>
+               <option selected="selected" value=<?php echo $epurl3;?>><?php echo $i; ?></option>
+                     <?php
+                 } else {
+                ?>
+               <option value=<?php echo $epurl3;?>><?php echo $i; ?></option>
+                <?php
+                 }
+                }
+                 ?>
+                 </select>
                 <iframe style="border: none;" id="to_watch_1" class="embedly-embed" width="1100" height="720" allowfullscreen  webkitallowfullscreen  mozallowfullscreen>
                 </iframe>   
                 </div>
@@ -128,6 +182,7 @@ if(!isset($_GET['anime'])){
         </div>
     </div>
         <script>
+
         let anime_to_watch = "<?= $_GET['anime'];?>";
         let url = "http://localhost:3000/video/" + anime_to_watch;
         $.ajax({
