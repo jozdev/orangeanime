@@ -65,6 +65,7 @@ I appreciate any bug reported or improvement made!
 <table align="center">
   <tr>
     <td align="center"><a href="https://github.com/jozdev"><img src="https://avatars0.githubusercontent.com/u/58850639?s=460&u=7b99346947ef28fb23b98604356fd3b3013c418b&v=4" width="100px;" alt=""/><br /><sub><b>jozdev</b></sub></a><br /><a title="Code">💻💡</a></td>
+        <td align="center"><a href="https://github.com/thurdev"><img src="https://avatars0.githubusercontent.com/u/58850639?s=460&u=7b99346947ef28fb23b98604356fd3b3013c418b&v=4" width="100px;" alt=""/><br /><sub><b>thurdev</b></sub></a><br /><a title="Code">💻</a></td>
   </tr>
 </table>
 
