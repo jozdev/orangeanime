@@ -36,7 +36,7 @@ This project consists of the realization of an anime streaming website that uses
 <p align="center">
  <img src="https://cdn.discordapp.com/attachments/450718681492750344/713497794949677076/unknown.png"  align="center">
  <p align="center">
- <img src="https://cdn.discordapp.com/attachments/713536487601209415/713549906194858044/unknown.png"  align="center">
+ <img src="https://cdn.discordapp.com/attachments/664456763478900756/713932225640398928/unknown.png"  align="center">
 
  <p align="center">In this section the user can see all animes with begin with first letter and more information about.</p></p>
          
