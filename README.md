@@ -4,7 +4,7 @@
                                                                         
 <h1 align="center">Orange Anime</h1>
 <p align="center" style="color: #ccc;">
-This project consists of the realization of an anime streaming website that uses third apis. (Project still under development)
+This project consists of the realization of an anime streaming website that uses third apis and my anime api crawling (currently outdated)
 </p>
 
 
