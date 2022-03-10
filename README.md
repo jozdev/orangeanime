@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://image.flaticon.com/icons/png/512/835/835649.png" width=150px" align="center">
+  <img src="https://cdn-icons-png.flaticon.com/512/203/203262.png" width=150px" align="center">
 </p>
                                                                         
 <h1 align="center">Orange Anime</h1>
